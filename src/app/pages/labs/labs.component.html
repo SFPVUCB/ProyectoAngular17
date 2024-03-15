@@ -7,3 +7,24 @@
   </li>
 
 </ul>
+<hr/>
+<!--aca estamos utilizando string interpolation usando el doble corchete {{}}-->
+<h2>{{ 'hola'.repeat(4) }}</h2>
+<p> la suma de 3 + 3 es {{3+3}}</p>
+<p> hola soy {{ name }} y mi edad es {{ age }}</p>
+
+<hr/>
+
+<!-- En este linea [src]="img" estamos haciendo uso de property binding
+  que es una forma de enlazar propiedades de un elemento html con una variable de nuestro component-->
+<!-- Nota: ahora estamos accediendo a los atributos de un objeto declarado en componnets-->
+<img [src]="person.img" alt="">
+<!--En esta parte hacemos uso de property binding,
+  que es una forma de enlazar propiedades de un elemento html con una variable de nuestro component-->
+<hr/>
+<input type="text" [value]="name">
+<button [disabled]="disabled"> Click me</button>
+<p>person: {{ person.name }}</p>
+<!--Si lo hacemos de esta forma solo nos votara la url de la imagen ya que no usamos la etiqueta de imagen -->
+<p>person: {{ person.img }}</p>
+

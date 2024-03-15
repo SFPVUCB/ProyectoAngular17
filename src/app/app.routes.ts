@@ -4,7 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LabsComponent } from './pages/labs/labs.component';
 
 export const routes: Routes = [
-  //en esta parte se definen las rutas de la aplicacion
+//en esta parte se definen las rutas de la aplicacion
 {
   path: 'home',
   component: HomeComponent
