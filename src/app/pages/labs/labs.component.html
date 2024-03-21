@@ -36,10 +36,18 @@
   <br/>
   <button (contextmenu)="clickDerecho($event)">DOUBLE CLICK ME</button>
   <br/>
-  <p>(change)</p>
+  <p>(CHANGE)</p>
   <!--NOTA: las funciones ya creadas por angular requieren de un parametro que es el evento que se esta ejecutando ejemplo (click)="clickHandler($event)"-->
   <input type="number" [value]="person.age" (change)="changeHandler($event)">
 
+  <p>(CHANGE)</p>
+  <input type="text" [value]="person.name" (change)="changeHandler($event)">
+
+  <p>(KEYDOWN)</p>
+  <input type="text" [value]="person.name" (keydown)="keydownHandler($event)">
+
+  <p>(KEYDOWN-SHIFT-T)</p>
+  <input type="text" [value]="person.name" (keydown.shift.t)="clickHandler()">
 
 
 </div>
