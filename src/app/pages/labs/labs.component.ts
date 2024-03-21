@@ -28,4 +28,27 @@ export class LabsComponent
     img: 'https://fydn.imgix.net/m%2Fgen%2Fart-print-std-portrait-p1%2F2675dd31-71e9-4f19-95fc-f487a9effab7.jpg?auto=format%2Ccompress&q=75'
   };
 
+  // le ponemos nombre a la funcion para manejar el click
+  clickHandler()
+  {
+    alert('Hola Sergio');
+  }
+  // creacion una funcion para activar el doble click
+  clickHandler2()
+  {
+    alert('Hola Fernando');
+  }
+  // funcion para crear click derecho
+  clickDerecho(event : MouseEvent)
+  {
+    event.preventDefault();
+    alert('Click Derecho');
+
+  }
+  //
+  changeHandler(event : Event)
+  {
+    console.log(event);
+  }
+
 }
