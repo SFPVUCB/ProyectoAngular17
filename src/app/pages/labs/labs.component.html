@@ -11,7 +11,7 @@
   <!--aca estamos utilizando string interpolation usando el doble corchete {{}}-->
   <h2>{{ 'hola'.repeat(4) }}</h2>
   <p> la suma de 3 + 3 es {{3+3}}</p>
-  <p> hola soy {{ name }} y mi edad es {{ age }}</p>
+  <p> hola soy {{ name() }} y mi edad es {{ age }}</p>
 
   <hr/>
 
@@ -29,6 +29,7 @@
   <!--Si lo hacemos de esta forma solo nos votara la url de la imagen ya que no usamos la etiqueta de imagen -->
   <p>person: {{ person.img }}</p>
   <hr/>
+  <!--aca probamos la captura del raton con click doble click y click izquierdo-->
   <!--añadimos un boton que al hacer (click) se ejecute un metodo de nuestro componente clickHandler-->
   <button (click)="clickHandler()">CLICK ME</button>
   <br/>
@@ -37,9 +38,9 @@
   <button (contextmenu)="clickDerecho($event)">DOUBLE CLICK ME</button>
   <br/>
   <p>(CHANGE)</p>
-  <!--NOTA: las funciones ya creadas por angular requieren de un parametro que es el evento que se esta ejecutando ejemplo (click)="clickHandler($event)"-->
+  <!--NOTA: las funciones ya creadas por angular requieren de un parametro que es el evento que se esta ejecutando ejemplo (click)="clickHandler($event)"-->ng se
   <input type="number" [value]="person.age" (change)="changeHandler($event)">
-
+    <!--Los siguientes parrafos son eventos que se pueden utilizar en angular para capturar eventos de teclado-->>
   <p>(CHANGE)</p>
   <input type="text" [value]="person.name" (change)="changeHandler($event)">
 
@@ -48,6 +49,16 @@
 
   <p>(KEYDOWN-SHIFT-T)</p>
   <input type="text" [value]="person.name" (keydown.shift.t)="clickHandler()">
+  <!--Apartir de este punto ya practicamos con signals -->
+  <hr/>
+  <h1>PRACTICANDO CON SIGNALS</h1>
+  <!--signals sirve para emitir eventos personalizados, en este caso vamos a emitir un evento personalizado
+  signals permite volver reactivo un componente y emitir eventos personalizados-->
+  <input type="text" [value]="name()" (change)="changeHandler($event)">
+  <p>name:{{name()}}</p>
+
+
+
 
 
 </div>

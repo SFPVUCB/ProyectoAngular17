@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from "@angular/common";
 
 @Component({
@@ -17,7 +17,7 @@ export class LabsComponent
     'task3',
   ];
 
-  name = 'Sergio';
+  name = signal('Sergio') ;
   age = 25;
   disabled = true;
   img = 'https://fydn.imgix.net/m%2Fgen%2Fart-print-std-portrait-p1%2F2675dd31-71e9-4f19-95fc-f487a9effab7.jpg?auto=format%2Ccompress&q=75'
@@ -48,7 +48,13 @@ export class LabsComponent
   //
   changeHandler(event : Event)
   {
-    console.log(event);
+    //event.target nos permite acceder al elemento que desencadeno el evento
+    const input = event.target as HTMLInputElement;
+    //esto nos sirve para obtener el valor del input
+    const newValue = input.value;
+    //En esta linea estamos modificando el valor de la señal name
+    this.name.set(newValue);
+
   }
   keydownHandler(event : KeyboardEvent)
   {
